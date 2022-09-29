@@ -24,3 +24,10 @@ a {
     background: black;
   }
 }
+
+#header {
+  background-color: #c668;
+  position: absolute;
+  top: 2%;
+  left: 2%;
+}
