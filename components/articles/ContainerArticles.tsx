@@ -7,7 +7,9 @@ interface Props {
 }
 
 export default function ContainerArticles({ data }: Props) {
-  const articles = useFetchin(data);
+  const { articles, start } = useFetchin(data);
+  lg(articles.length);
+  if (articles.length === 0) start();
   lg("from component", articles);
   return (
     <>
