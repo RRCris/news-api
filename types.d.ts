@@ -1,6 +1,6 @@
 export interface cardArticle {
   title: String;
   description: String;
-  image: String;
+  image: string | StaticImport;
   date: String;
 }

@@ -1,6 +1,7 @@
 import { lg } from "../../config";
 import { cardArticle } from "../../types";
 import { useFetchin } from "./ContainerArticles.utils";
+import styles from "./ContainerArticles.module.css";
 
 interface Props {
   data?: cardArticle[];
@@ -8,12 +9,22 @@ interface Props {
 
 export default function ContainerArticles({ data }: Props) {
   const { articles, start } = useFetchin(data);
-  lg(articles.length);
+
   if (articles.length === 0) start();
-  lg("from component", articles);
+
   return (
-    <>
-      <h1>this is my containr of articles</h1>
-    </>
+    <div className={styles.ContainerArticles}>
+      {articles.length === 0 ? (
+        <>
+          <h1>i don´t have articles</h1>
+        </>
+      ) : (
+        <>
+          {articles.map((art) => (
+            <div key={articles.indexOf(art)}>{art.title}</div>
+          ))}
+        </>
+      )}
+    </div>
   );
 }

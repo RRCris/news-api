@@ -7,8 +7,6 @@ function MyApp({ Component, pageProps }: AppProps) {
     <>
       <Head>
         <title>News App</title>
-        <meta name="nueva app de noticias" content="noticias del mundo" />
-        <link rel="icon" href="/favicon.ico" />
       </Head>
       <header id="header">news api🍀</header>
       <Component {...pageProps} />

@@ -2,8 +2,7 @@ html,
 body {
   padding: 0;
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
-    Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
+  font-family: "Gemunu Libre", sans-serif;
 }
 
 a {
@@ -20,14 +19,12 @@ a {
     color-scheme: dark;
   }
   body {
-    color: white;
-    background: black;
+    color: var(--color-letter);
+    background: var(--color-primary);
   }
 }
 
-#header {
-  background-color: #c668;
-  position: absolute;
-  top: 2%;
-  left: 2%;
+:root {
+  --color-primary: #124;
+  --color-letter: #ccc;
 }
